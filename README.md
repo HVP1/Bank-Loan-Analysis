@@ -1,45 +1,44 @@
-# Bank-Loan-Case-Study
-## Risk Analytics using Python
+# Loan Risk Assessment Project
 
-### This case study aims to give you an idea of applying EDA in a real business scenario. In this case study, apart from applying the techniques that you have learnt in the EDA module, you will also develop a basic understanding of risk analytics in banking and financial services and understand how data is used to minimize the risk of losing money while lending to customers.
+## Analyzing Risk in Banking through Python
 
-### The loan providing companies find it hard to give loans to the people due to their insufficient or non-existent credit history. Because of that, some consumers use it as their advantage by becoming a defaulter. Suppose you work for a consumer finance company which specialises in lending various types of loans to urban customers. You have to use EDA to analyse the patterns present in the data. This will ensure that the applicants capable of repaying the loan are not rejected.
+### Overview
+This project explores the use of Exploratory Data Analysis (EDA) in a real-world financial scenario. The objective is to understand how data can assist in managing risk when approving loans, particularly in minimizing financial losses for a bank or financial institution. Participants will apply EDA techniques while learning the fundamentals of risk analytics in the context of banking.
 
-### When the company receives a loan application, the company has to decide for loan approval based on the applicant’s profile. Two types of risks are associated with the bank’s decision:
-  - ### If the applicant is likely to repay the loan, then not approving the loan results in a loss of business to the company.
-  - ### If the applicant is not likely to repay the loan, i.e. he/she is likely to default, then approving the loan may lead to a financial loss for the company.
-  
-### The data given below contains the information about the loan application at the time of applying for the loan. It contains two types of scenarios:
+### Project Context
+Loan providers often face challenges when deciding whether to extend credit to individuals with limited or no credit history. This can lead to an increased risk of defaults by borrowers who may take advantage of the system. For this project, imagine you are working for a finance company that provides loans to urban clients. You are tasked with applying EDA to identify patterns in the data to ensure that applicants who are capable of repaying their loans are not unfairly rejected.
 
-  - ### The client with payment difficulties: he/she had late payment more than X days on at least one of the first Y instalments of the loan in our sample
-  - ### All other cases: All other cases when the payment is paid on time.
-  
-### When a client applies for a loan, there are four types of decisions that could be taken by the client/company:
+### Decision Points
+When a loan application is received, the company must assess the applicant’s profile to decide whether to approve the loan. The two types of risks involved are:
+- **Opportunity Loss**: Denying a loan to a creditworthy applicant results in lost business for the company.
+- **Financial Risk**: Approving a loan to an applicant who may default can lead to significant financial losses for the company.
 
-### 1. Approved: The company has approved loan application
-### 2. Cancelled: The client cancelled the application sometime during approval. Either the client changed her/his mind about the loan or in some cases due to a higher risk of the client he received worse pricing which he did not want.
-### 3. Refused: The company had rejected the loan (because the client does not meet their requirements etc.).
-### 4. Unused Offer: Loan has been cancelled by the client but on different stages of the process.
+### Data Insights
+The dataset contains loan application information and includes two key types of scenarios:
+- **Borrowers Facing Payment Issues**: Applicants who have delayed payments beyond a certain threshold on at least one of the initial loan installments.
+- **Other Borrowers**: Applicants who have made all payments on time.
 
-### In this case study, you will use EDA to understand how consumer attributes and loan attributes influence the tendency of default.
+### Loan Application Outcomes
+Loan applications can result in the following outcomes:
+1. **Approved**: The loan is successfully approved.
+2. **Cancelled**: The applicant cancels the loan, either due to a change in decision or unfavorable terms.
+3. **Rejected**: The loan application is denied by the company, usually because the applicant doesn’t meet certain criteria.
+4. **Unused Offer**: The offer is canceled by the applicant at various stages of the process.
 
-### Data Understanding:
-1. **application_data.csv** contains all the information of the client at the time of application.
-The data is about wheather a client has payment difficulties.
-2. **previous_application.csv** contains information about the client’s previous loan data. It contains the data whether the previous application had been Approved, Cancelled, Refused or Unused offer.
-3. **columns_descrption.csv** is data dictionary which describes the meaning of the variables.
+### EDA Objective
+This project uses EDA to understand how various consumer and loan attributes affect the likelihood of default.
 
-### You are required to provide a detailed report for the below data record mentioning the answer to the questions that follows:
+### Dataset Overview
+1. **application_data.csv**: Contains detailed client information at the time of loan application, including indications of potential payment issues.
+2. **previous_application.csv**: Includes records of prior loan applications and their outcomes (Approved, Cancelled, Refused, Unused Offer).
+3. **columns_description.csv**: A data dictionary that explains the meaning of each variable.
 
-1. Present the overall approach of the analysis. Mention the problem statement and the analysis approach briefly
-Indentify the missing data and use appropriate method to deal with it. (Remove columns/or replace it with an appropriate value)
-Hint: Note that in EDA, since it is not necessary to replace the missing value, but if you have to replace the missing value, what should be the approach. Clearly mention the approach.
-2. Identify if there are outliers in the dataset. Also, mention why do you think it is an outlier. Again, remember that for this exercise, it is not necessary to remove any data points.
-3. Identify if there is data imbalance in the data. Find the ratio of data imbalance.
-    ***Hint: Since there are a lot of columns, you can run your analysis in loops for the appropriate columns and find the insights.***
-4. Explain the results of univariate, segmented univariate, bivariate analysis, etc. in business terms.
-5. Find the top 10 correlation for the Client with payment difficulties and all other cases (Target variable). Note that you have to find the top correlation by segmenting the data frame w.r.t to the target variable and then find the top correlation for each of the segmented data and find if any insight is there. Say, there are 5+1(target) variables in a dataset: Var1, Var2, Var3, Var4, Var5, Target. And if you have to find top 3 correlation, it can be: Var1 & Var2, Var2 & Var3, Var1 & Var3. Target variable will not feature in this correlation as it is a categorical variable and not a continuous variable which is increasing or decreasing.
-**Include visualizations and summarize the most important results in the presentation. You are free to choose the graphs which explain the numerical/categorical variables. Insights should explain why the variable is important for differentiating the clients with payment difficulties with all other cases.**
+### Steps to Follow
+1. **Problem Statement & Approach**: Outline the key problem and summarize your approach to analysis. Handle missing data appropriately (removal or imputation), and clearly explain your chosen method.
+2. **Outliers**: Identify and discuss potential outliers in the dataset, explaining why these values are considered outliers. No need to remove them for this analysis.
+3. **Data Imbalance**: Check for any imbalance in the dataset and calculate its ratio.
+   - *Hint: Given the large number of columns, automate your analysis where appropriate to extract insights.*
+4. **Analysis**: Perform univariate, segmented univariate, and bivariate analyses. Interpret the results in business terms.
+5. **Correlations**: Identify the top 10 correlations for borrowers facing payment difficulties and for other cases (based on the target variable). Segment the data, calculate correlations, and derive insights.
+   - **Visualization**: Use visualizations to explain key findings. Choose appropriate graphs to represent numerical and categorical variables. Summarize the most important insights, particularly in differentiating borrowers with payment difficulties from those without.
 
-# [link to the Loom Video explanation of the project by the Author](https://www.loom.com/share/e92fda945cd84b78b47dc96e5ccdbfbf)
-# [link to the dataset](https://drive.google.com/drive/folders/1Mcvc5tJGvgJK8UetCtY1VnMYoVOMzaAe?usp=sharing)
